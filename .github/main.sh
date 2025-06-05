@@ -25,7 +25,8 @@ git clone https://github.com/ophub/amlogic-s9xxx-armbian && mvdir amlogic-s9xxx-
 wget -O ./action.yml https://raw.githubusercontent.com/ophub/amlogic-s9xxx-armbian/main/action.yml
 sed -i 's|default: "ophub/kernel"|default: "hkpc/kernel"|g' ./action.yml
 sed -i 's|default: "-ophub"|default: ""|g' ./action.yml
-sed -i 's|custom_name="-ophub"|custom_name=""|g' ./compile-kernel/tools/script/armbian_compile_kernel_script.sh
-sed -i 's|\[ -n -ophub \]|[ -n  ]|g' ./build-armbian/armbian-files/common-files/usr/sbin/armbian-kernel
+sed -i 's|custom_name="-ophub"|custom_name=""|g' ./recompile
+#sed -i 's|custom_name="-ophub"|custom_name=""|g' ./compile-kernel/tools/script/armbian_compile_kernel_script.sh
+#sed -i 's|\[ -n -ophub \]|[ -n  ]|g' ./build-armbian/armbian-files/common-files/usr/sbin/armbian-kernel
 sed -i 's|\(script_repo="https://github\.com/\)ophub/amlogic-s9xxx-armbian\(\.git"\)|\1hkpc/kernel\2|g' \
   ./build-armbian/armbian-files/common-files/usr/sbin/armbian-kernel
